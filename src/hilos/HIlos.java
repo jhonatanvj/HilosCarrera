@@ -4,9 +4,7 @@
  */
 package hilos;
 
-import Model.Alien;
-import Model.Hombrelobo;
-import Model.Vampiro;
+
 import View.Ventana;
 import javax.swing.SwingUtilities;
 
