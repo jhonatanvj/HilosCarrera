@@ -4,7 +4,9 @@
  */
 package View;
 
-import hilos.Hilospa;
+import Modelo.Alien;
+import Modelo.HombreLobo;
+import Modelo.Vampiro;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -67,13 +69,13 @@ public class Ventana extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                Hilospa tvampiro = new Hilospa("vampiro",vampiro,vampiro_pos);
-                Hilospa thombrelobo = new Hilospa("hombrelobo",hombrelobo,hombrelobo_pos);
-                Hilospa talien = new Hilospa("alien",alien,alien_pos);
-                
-                        tvampiro.iniciarHilo();
-        thombrelobo.iniciarHilo();
-        talien.iniciarHilo();
+                Alien thalien = new Alien("Alien",alien,alien_pos);
+                Vampiro thvampiro = new Vampiro("Vampiro",vampiro,vampiro_pos);
+                HombreLobo thhombrelobo = new HombreLobo("HombreLobo",hombrelobo,hombrelobo_pos);
+             
+                thvampiro.iniciarHilo();
+                thhombrelobo.iniciarHilo();
+                thalien.iniciarHilo();
             }
         });
         
